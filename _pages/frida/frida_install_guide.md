@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "frida 설치"
-permalink: /frida/install_guide
+permalink: /frida/install_guide/
 sidebar:
   nav: docs
 toc: true

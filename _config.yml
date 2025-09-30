@@ -1,14 +1,20 @@
 title: "My Tech Blog"
 description: "개발 · 보안 · 클라우드 공부 기록"
 
-# Minimal Mistakes 원격 테마
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark"
 
-# ✅ GitHub Pages에서 허용되는 플러그인 (필수)
 plugins:
   - jekyll-include-cache
 
+# ✅ _pages 폴더를 빌드 대상으로 등록
+collections:
+  pages:
+    output: true
+    permalink: /:path/   # _pages/android/index.md   -> /android/
+                         # _pages/frida/install_guide.md -> /frida/install_guide/
+
+# 기본값(페이지/포스트에 사이드바 자동 적용)
 defaults:
   - scope:
       path: ""
