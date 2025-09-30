@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "frida 설치"
-permalink: /android/proxy-speedup/
+permalink: /frida/
 sidebar:
   nav: docs
 ---
