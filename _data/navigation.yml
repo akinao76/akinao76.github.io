@@ -1,0 +1,19 @@
+docs:
+  - title: Android
+    url: /android/
+    children:
+      - title: Proxy 속도 개선 팁
+        url: /android/proxy-speedup/
+      - title: Nox Wi-Fi Proxy
+        url: /android/nox-wifi/
+  - title: Frida
+    url: /frida/
+    children:
+      - title: frida 설치
+        url: /frida/install_guide/
+  - title: Python
+    url: /python/
+    children:
+      - title: 기본 문법
+        url: /python/basics/
+
