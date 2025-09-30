@@ -1,19 +1,30 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  // 섹션 제목을 클릭하면 접고/펼치기
-  document.querySelectorAll('.nav__sub-title').forEach(function (title) {
-    // 현재 페이지가 이 섹션에 속하지 않으면 기본값 = 접힘
-    var hasActiveChild = false;
-    var ul = title.nextElementSibling;
-    if (ul && ul.classList.contains('nav__items')) {
-      hasActiveChild = !!ul.querySelector('a.active'); // 현재 페이지 링크에 active 클래스가 붙음
-    }
-    if (!hasActiveChild) title.classList.add('is-collapsed');
+  // 사이드바의 각 섹션(li)을 순회
+  document.querySelectorAll('.nav__list li').forEach(function (li) {
+    var title = li.querySelector('.nav__sub-title');
+    if (!title) return;
 
-    title.addEventListener('click', function () {
-      title.classList.toggle('is-collapsed');
+    // 이 li 안의 첫 번째 하위 목록(ul)
+    var submenu = Array.from(li.children).find(function (el) { return el.tagName === 'UL'; });
+    if (!submenu) return; // 하위 항목이 없으면 패스
+
+    // 현재 페이지가 하위 항목에 포함되어 있지 않으면 기본을 "접힘"으로 시작
+    var hasActiveChild = !!submenu.querySelector('a.active');
+    if (!hasActiveChild) {
+      title.classList.add('is-collapsed');
+      submenu.style.display = 'none';
+    }
+
+    // 제목 클릭 시: 네비게이션 이동 대신 접기/펼치기 토글
+    title.addEventListener('click', function (e) {
+      // Ctrl/⌘ 클릭은 새 탭 이동 허용
+      if (e.ctrlKey || e.metaKey) return;
+
+      e.preventDefault();
+      var collapsed = title.classList.toggle('is-collapsed');
+      submenu.style.display = collapsed ? 'none' : '';
     });
   });
 });
 </script>
-
