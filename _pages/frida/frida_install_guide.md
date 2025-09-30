@@ -4,6 +4,8 @@ title: "frida 설치"
 permalink: /frida/install_guide
 sidebar:
   nav: docs
+toc: true
+toc_sticky: true
 ---
 
 # 1. Frida 설치
