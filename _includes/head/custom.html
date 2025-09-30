@@ -1,0 +1,11 @@
+<style>
+/* 사이드바 제목(섹션) 클릭 가능하게 */
+.nav__sub-title { cursor: pointer; user-select: none; position: relative; }
+/* 토글 화살표 */
+.nav__sub-title::after { content: "▾"; position: absolute; right: 0; }
+.nav__sub-title.is-collapsed::after { content: "▸"; }
+
+/* 접힘 상태일 때 다음 목록을 숨김 */
+.nav__sub-title.is-collapsed + ul.nav__items { display: none; }
+</style>
+

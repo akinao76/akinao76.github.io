@@ -1,0 +1,19 @@
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // 섹션 제목을 클릭하면 접고/펼치기
+  document.querySelectorAll('.nav__sub-title').forEach(function (title) {
+    // 현재 페이지가 이 섹션에 속하지 않으면 기본값 = 접힘
+    var hasActiveChild = false;
+    var ul = title.nextElementSibling;
+    if (ul && ul.classList.contains('nav__items')) {
+      hasActiveChild = !!ul.querySelector('a.active'); // 현재 페이지 링크에 active 클래스가 붙음
+    }
+    if (!hasActiveChild) title.classList.add('is-collapsed');
+
+    title.addEventListener('click', function () {
+      title.classList.toggle('is-collapsed');
+    });
+  });
+});
+</script>
+
