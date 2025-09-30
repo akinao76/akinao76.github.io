@@ -1,22 +1,15 @@
 title: "My Tech Blog"
 description: "개발 · 보안 · 클라우드 공부 기록"
-remote_theme: "mmistakes/minimal-mistakes"
 
-# 다크 스킨 적용
+# Minimal Mistakes 원격 테마
+remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark"
 
-# 글 작성자 정보
-author:
-  name: "akinao76"
-  bio: "보안 · 클라우드 · 모의해킹 공부하는 개발자"
-  location: "Korea"
-  links:
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/akinao76"
+# ✅ GitHub Pages에서 허용되는 플러그인 (필수)
+plugins:
+  - jekyll-include-cache
 
-# 네비게이션 메뉴
-# 왼쪽 상단 메뉴에 표시됨
+# (옵션) 상단 메뉴
 main:
   - title: "About"
     url: /about/
