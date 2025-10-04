@@ -33,11 +33,32 @@ python -c "import frida; print(frida.__version__)"
 
 ## 2) Frida Server 설치
 
+Frida Server 다운로드
+-> https://github.com/frida/frida/releases
+
+
+## 3) Frida Server 실행
+
 사전 작업
 - Android 루팅
 - adb 설치
 
-Frida Server 다운로드
--> https://github.com/frida/frida/releases
+### Frida Server 파일 이동
+```
+adb push [Frida Server 파일 위치] /data/local/tmp
+```
 
+### Frida Server 설정
+```
+adb shell
+cd /data/local/tmp
+mv [Frida Server 이름] frida-server
+chmod 755 frida-server
+```
+
+### Frida Server 실행
+
+```
+./frida-server &
+```
 
