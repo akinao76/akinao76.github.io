@@ -68,4 +68,4 @@ chmod 755 frida-server
 ```
 frida-ps -Uai
 ```
-
+![frida_check](/home/akinao/akinao76.github.io/_assets/images/frida/frida_install_guide/frida_check.png)
