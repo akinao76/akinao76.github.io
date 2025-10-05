@@ -11,6 +11,8 @@ docs:
     children:
       - title: frida 설치
         url: /frida/install_guide/
+      - title: frida 사용법
+        url: /frida/frida-Use/
   - title: Python
     url: /python/
     children:
