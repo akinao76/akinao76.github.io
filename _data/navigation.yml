@@ -1,4 +1,10 @@
 docs:
+  - title: about
+    url: /about/
+    children:
+      - title: 개요
+        url: /about/
+      
   - title: Android
     url: /android/
     children:
@@ -6,6 +12,7 @@ docs:
         url: /android/proxy-speedup/
       - title: Nox Wi-Fi Proxy
         url: /android/nox-wifi/
+
   - title: Frida
     url: /frida/
     children:
@@ -13,6 +20,7 @@ docs:
         url: /frida/install_guide/
       - title: frida 사용법
         url: /frida/frida-Use/
+
   - title: Python
     url: /python/
     children:
