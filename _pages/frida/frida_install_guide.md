@@ -68,4 +68,4 @@ chmod 755 frida-server
 ```
 frida-ps -Uai
 ```
-![frida_check](/_assets/images/frida/frida_install_guide/frida_check.png)
+![frida_check](/assets/images/frida/frida_install_guide/frida_check.png)
