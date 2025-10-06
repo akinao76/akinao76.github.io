@@ -31,6 +31,7 @@ pip install --no-cache-dir "frida==16.7.19" "frida-tools>=12,<14"
 
 
 #설치후 버전 확인
+```
 python -c "import frida; print(frida.__version__)"
 ```
 ![frida_version_check](/assets/images/frida/frida_install_guide/frida_version_check.png)
